@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BankomatApp</title>
+    <link rel="stylesheet" href="Visual.css">
+</head>
+<body>
+    <!-- Fixed top bar for the logo -->
+    <div class="logo-container">
+        <img src="Logo.jpeg" alt="Bank Logo">
+    </div>
+
+    <!-- Login-sektionen -->
+    <div class="log_box">
+        <h2>Logga in</h2>
+        <input id="user_in" type="text" placeholder="Användarnamn"> <br/>
+        <input id="pass_in" type="password" placeholder="Lösenord"> <br/>
+        <button id="log_btn">Logga in</button>
+        <p id="error_msg" class="error"></p>
+    </div>
+
+    <!-- Sektionen efter inloggning -->
+    <div id="Loggedin">
+        <h1>Välkommen, <span id="user_name">Användare</span>!</h1>
+        <p>Saldo: <span id="user_balance">0</span> kr</p>
+
+        <!-- Knappar för insättning och uttag -->
+        <h3>Insättning</h3>
+        <div class="input-container">
+            <button class="number" onclick="appendNumber('1')">1</button>
+            <button class="number" onclick="appendNumber('2')">2</button>
+            <button class="number" onclick="appendNumber('3')">3</button>
+            <button class="number" onclick="appendNumber('4')">4</button>
+            <button class="number" onclick="appendNumber('5')">5</button>
+            <button class="number" onclick="appendNumber('6')">6</button>
+            <button class="number" onclick="appendNumber('7')">7</button>
+            <button class="number" onclick="appendNumber('8')">8</button>
+            <button class="number" onclick="appendNumber('9')">9</button>
+            <button class="number" onclick="appendNumber('0')">0</button>
+        </div>
+        <input id="Insättning" type="text" placeholder="Ange belopp"> <br/> 
+
+        <button id="insätt_btn">Sätt in</button> 
+        <button id="uttag_btn">Ta ut</button>
+
+        <button id="out_btn">Log Out</button>
+        <p id="error_action_msg" class="error"></p>
+    </div>
+
+    <script src="Funktion.js"></script>
+</body>
+</html>
